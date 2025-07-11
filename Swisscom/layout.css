@@ -1,0 +1,1406 @@
+/* Universal setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* CSS variables */
+:root {
+    --normal-width: 90%;
+    --bigger-width: 70rem;
+    --normal-margin: 0 auto;
+    --primary-color: rgb(3, 17, 81);
+    --secondary-color: rgba(5, 14, 55, 0.6);
+    --button-color: rgb(46, 104, 212);
+}
+
+/* header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+/* navigation */
+nav {
+    width: var(--normal-width);
+    margin: var(--normal-margin);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.top-nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.lower-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.lower-nav-right {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lower-opts {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.new {
+    color: red;
+}
+
+.lower-nav-right a {
+    text-decoration: none;
+}
+
+.lower-nav-left {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lower-nav-left a,
+.lower-nav-right a {
+    color: var(--primary-color);
+}
+
+.top-nav a:hover,
+.lower-nav-left a:hover,
+.lower-opts a:hover {
+    color: var(--button-color);
+}
+
+.nav-logo {
+    background-image: url('https://sdx.scsstatic.ch/v2.152.1/js/webcomponents/webcomponents/assets/lifeform-spritesheet@2x.png');
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    /* Adds spacing between logo and next item */
+    animation: repeatingAnimation 6s steps(90) infinite;
+    cursor: pointer;
+    width: 0px;
+    height: 40px;
+    min-width: 40px;
+    margin-left: -15px;
+    background-size: 3600px 40px;
+    background-position: 0 0;
+}
+
+.nav-right-opts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+}
+
+@keyframes repeatingAnimation {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -3600px 0;
+    }
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-left a {
+    font-size: 1.25rem;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.nav-left a:hover {
+    color: var(--button-color);
+}
+
+/* deals */
+.deals-container {
+    width: var(--normal-width);
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+    gap: 1rem;
+    height: 37rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.deals-container::-webkit-scrollbar,
+.smartphone-container::-webkit-scrollbar {
+    display: none;
+}
+
+.deal-1 {
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    justify-content: space-between;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.deal-2 {
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('https://rcp.scsstatic.ch/content/dam/assets/b2c/promotionen/juni-25/breakfree-814x608.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.deal-3 {
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('https://rcp.scsstatic.ch/content/dam/assets/b2c/promotionen/wireless/prepaid-kids-0902/prepaid-kids-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.deal-1-img {
+    background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/products/samsung/zfold7-hero-banner.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+
+.deal-1-img:hover {
+    transform: scale(1.05);
+}
+
+.deal-1-details button {
+    border: 1px solid rgb(46, 104, 212);
+    color: rgb(46, 104, 212);
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 0.85rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.deal-1-details button:hover {
+    background-color: #c1eaff;
+}
+
+.deal-1-details p:nth-of-type(1) {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.deal-1-details p:nth-of-type(2) {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.deals-details {
+    background-color: transparent;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.deals-details p:nth-of-type(1) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.deals-details p:nth-of-type(2) {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+/* progress bar */
+.progress-container {
+    display: flex;
+    width: 50%;
+    height: 0.25rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.start {
+    background-color: rgb(46, 104, 212);
+}
+
+.mid,
+.end {
+    background-color: #d3d2d2;
+}
+
+.section {
+    flex: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section:hover,
+.start.clicked,
+.mid.clicked,
+.end.clicked {
+    background-color: rgb(46, 104, 212);
+}
+
+/* common heading */
+.heading-container p:nth-of-type(1) {
+    font-size: 1.95rem;
+    color: var(--secondary-color);
+}
+
+.heading-container p:nth-of-type(2) {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* icons */
+.icons-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1.75rem;
+    justify-items: center;
+    align-items: center;
+    width: var(--normal-width);
+    margin: 5rem auto;
+}
+
+/* deatures */
+.feature-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(3, 17, 81);
+    cursor: pointer;
+}
+
+.feature-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: var(--normal-width);
+    margin: var(--normal-margin);
+}
+
+/* smartphones */
+.smartphone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    width: var(--normal-width);
+    margin: 1rem auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.smartphone {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-shrink: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.phone button {
+    font-size: 1rem;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(153, 47, 159);
+    padding: 0.75rem 1.75rem;
+}
+
+.phone p:nth-of-type(1),
+.phone p:nth-of-type(2) {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.phone button i {
+    margin-right: 0.5rem;
+}
+
+.phone a {
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.phone img {
+    width: 20rem;
+}
+
+.phone img:hover {
+    transform: scale(1.07);
+    transition: transform 0.5s ease;
+}
+
+.purplish {
+    color: rgb(153, 47, 159);
+    font-size: 1.15rem;
+}
+
+.purplish i,
+.phone i {
+    margin-right: 0.5rem;
+}
+
+/* feature cards */
+.selected-cards {
+    width: var(--normal-width);
+    margin: var(--normal-margin);
+    gap: 2rem;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.shared-card {
+    height: 35rem;
+    cursor: pointer;
+}
+
+.even-card {
+    background-color: rgb(239, 243, 246);
+    border-radius: 18px;
+}
+
+.even-card-img {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.even-card-img-1 {
+    background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/products/google/en-google-wkz-m-juli-25.png");
+}
+
+.even-card-img-2 {
+    background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/kombi/hera/kombiteaser_en.png");
+}
+
+.even-card-img:hover {
+    transform: scale(1.05);
+}
+
+.top-details button {
+    background-color: rgb(3, 17, 81);
+    color: white;
+    font-weight: lighter;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.top-details,
+.top-details p {
+    background-color: transparent;
+    color: rgb(3, 17, 81);
+}
+
+.top-details p:nth-of-type(1) {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.top-details p:nth-of-type(2) {
+    font-size: 1.1rem;
+    font-weight: lighter;
+    margin-top: 1rem;
+}
+
+.top-details strong,
+.lower-bttn,
+.lower-bttn i {
+    background-color: transparent;
+}
+
+.lower-bttn a {
+    background-color: transparent;
+    color: rgb(46, 104, 212);
+    text-decoration: none;
+}
+
+.odd-img-1 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('https://rcp.scsstatic.ch/content/dam/assets/b2c/home/experience-fragments/uefa-women-euro-25-teaser-2-0.jpg');
+}
+
+.odd-img-2 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('https://rcp.scsstatic.ch/content/dam/swisscom/de/res/Wettbewerbe/festival-ticket-teaser.jpg');
+}
+
+.odd-card {
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.odd-details {
+    padding: 2rem;
+}
+
+.odd-details,
+.odd-details p {
+    background-color: transparent;
+    color: white;
+    margin-top: 1rem;
+}
+
+.odd-details p:nth-of-type(1) {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.odd-details p:nth-of-type(2) {
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+.odd-details button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.odd-lower-bttn {
+    padding: 2.5rem 2rem;
+}
+
+.odd-lower-bttn,
+.odd-lower-bttn i {
+    background-color: transparent;
+}
+
+.odd-lower-bttn a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+}
+
+/* discover container */
+.discover-container {
+    width: var(--normal-width);
+    margin: var(--normal-margin);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.discover-container p:nth-of-type(1) {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.discover-container p:nth-of-type(2) {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.discover-container button {
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.discover-container button:hover {
+    background-color: #c1eaff;
+}
+
+.discover-details span {
+    background: linear-gradient(86deg, #F20505 7.93%, #0445C8 29.51%, #1FB9FF 62.97%, #033AAA 92.6%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* blogs container */
+.blogs-container {
+    width: var(--normal-width);
+    margin: var(--normal-margin);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.blog {
+    margin-bottom: 2rem;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.blog:hover {
+    border: 1px solid black;
+}
+
+.blog-img-container {
+    height: 20rem;
+    width: 100%;
+}
+
+.blog-img-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    transition: transform 0.5s ease;
+}
+
+.blog-img-container img:hover {
+    transform: scale(1.05);
+}
+
+
+.blog-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog p:nth-of-type(1) {
+    font-size: 1.45rem;
+    color: var(--primary-color);
+}
+
+.blog p:nth-of-type(2) {
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+.blog-details a {
+    color: var(--button-color);
+    text-decoration: none;
+}
+
+.footer {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: var(--normal-width);
+    margin: var(--normal-margin);
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.language-select {
+    margin-top: 10px;
+    padding: 6px;
+    width: 100%;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.social-icons a:hover {
+    color: #0072c6;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ccc;
+    background-color: rgb(51, 51, 51);
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* only for footer */
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Small devices: Smartphones 767px */
+@media (max-width: 767.98px) {
+
+    .top-nav,
+    .lower-opts {
+        display: none;
+    }
+
+    .deals-container {
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    .deal-1 {
+        width: 82%;
+    }
+
+    .deal-2,
+    .deal-3 {
+        width: 80%;
+    }
+
+    .deal-1-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    .deal-1-img {
+        height: 35%;
+    }
+
+    .selected-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .even-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 3rem 0;
+    }
+
+    .even-card-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
+    .even-card-img-1 {
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .even-card-img-2 {
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .odd-details {
+        width: 100%;
+    }
+
+    .odd-details button {
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+    .discover-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .discover-container button {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .discover-img img {
+        margin-top: 2rem;
+        height: auto;
+        width: 100%;
+    }
+
+    .blogs-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog {
+        width: 100%;
+        height: 33rem;
+        border: 1px solid black;
+    }
+
+    .blog-details {
+        height: 40%;
+    }
+}
+
+/* Medium devices: Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .top-nav,
+    .lower-opts {
+        display: none;
+    }
+
+    .deals-container {
+        width: var(--normal-width);
+    }
+
+    .deal-1 {
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .deal-2,
+    .deal-3 {
+        width: 85%;
+    }
+
+    .deal-1-details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 49%;
+        height: 68%;
+    }
+
+    .deal-1-img {
+        width: 49%;
+        height: 100%;
+        background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/products/samsung/zfold7-hochformat.png");
+    }
+
+    .deal-1-details button {
+        width: 70%;
+    }
+
+    .deals-details {
+        height: 100%;
+        width: 58%;
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 2rem;
+    }
+
+    .deals-details p:nth-of-type(1) {
+        font-size: 1.75rem;
+    }
+
+    .deals-details p:nth-of-type(2) {
+        font-size: 3rem;
+    }
+
+    .selected-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .even-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .even-card-details {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .even-card-img-1 {
+        background-size: cover;
+        width: 40%;
+        height: 100%;
+    }
+
+    .even-card-img-2 {
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+    }
+
+    .odd-details {
+        width: 100%;
+    }
+
+    .odd-details button {
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+    .discover-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .discover-details {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 2rem;
+    }
+
+    .discover-container button {
+        font-size: 1.1rem;
+        height: 3rem;
+        width: 20rem;
+        border-radius: 8px;
+    }
+
+    .discover-img img {
+        height: auto;
+        width: 100%;
+    }
+
+    .blog {
+        width: 48%;
+        height: 34rem;
+    }
+
+    .blog-details {
+        height: 14rem;
+    }
+}
+
+/* Large devices: Tablets (landscape) and small laptops (992px to 1149) */
+@media (min-width: 992px) and (max-width: 1149.98px) {
+
+    .top-nav,
+    .lower-opts {
+        display: none;
+    }
+
+    .deal-1 {
+        width: 62%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .deal-2,
+    .deal-3 {
+        width: 30%;
+    }
+
+    .deal-1-details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 49%;
+        height: 68%;
+    }
+
+    .deal-1-img {
+        width: 49%;
+        height: 100%;
+        background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/products/samsung/zfold7-hochformat.png");
+    }
+
+    .deal-1-details button {
+        width: 70%;
+    }
+
+    .deals-details {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+    }
+
+    .deals-details p:nth-of-type(1) {
+        font-size: 1.75rem;
+    }
+
+    .deals-details p:nth-of-type(2) {
+        font-size: 3rem;
+    }
+
+    .selected-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .even-card {
+        height: 30rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        width: 48%;
+    }
+
+    .odd-card {
+        height: 30rem;
+        width: 48%;
+    }
+
+    .even-card-details {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .even-card-img-1 {
+        background-size: contain;
+        width: 50%;
+        height: 100%;
+    }
+
+    .even-card-img-2 {
+        background-size: contain;
+        height: 100%;
+        width: 50%;
+    }
+
+    .odd-details {
+        width: 60%;
+    }
+
+    .odd-details button {
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+    .discover-container {
+        width: 80%;
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        overflow: hidden;
+    }
+
+    .discover-details {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 2rem;
+    }
+
+    .discover-img {
+        width: auto;
+        height: 100%;
+    }
+
+    .discover-img img {
+        width: auto;
+        height: 100%;
+    }
+
+    .discover-container button {
+        padding: 1rem 0;
+        width: 15rem;
+    }
+
+    .blog {
+        width: 31%;
+        height: 37rem;
+    }
+
+    .blog-details {
+        height: 16.5rem;
+    }
+}
+
+/* Extra large devices: Desktops (1150px to 1449px) */
+@media (min-width: 1150px) and (max-width: 1449.98px) {
+    .deal-1 {
+        width: 49%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .deal-1-details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 49%;
+        height: 68%;
+    }
+
+    .deal-1-img {
+        width: 49%;
+        height: 100%;
+        background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/products/samsung/zfold7-hochformat.png");
+    }
+
+    .deal-2,
+    .deal-3 {
+        width: 30%;
+    }
+
+    .smartphone {
+        justify-content: center;
+    }
+
+    .selected-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .even-card {
+        height: 30rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        width: 48%;
+    }
+
+    .odd-card {
+        height: 30rem;
+        width: 48%;
+    }
+
+    .even-card-details {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        padding: 0 2rem;
+    }
+
+    .even-card-img-1 {
+        background-size: contain;
+        width: 50%;
+        height: 100%;
+    }
+
+    .even-card-img-2 {
+        background-size: contain;
+        width: 50%;
+        height: 100%;
+    }
+
+    .odd-details {
+        width: 60%;
+    }
+
+    .odd-details button {
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+    .discover-container {
+        width: 80%;
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        overflow: hidden;
+    }
+
+    .discover-details {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 2rem;
+    }
+
+    .discover-img {
+        width: auto;
+        height: 100%;
+    }
+
+    .discover-img img {
+        width: auto;
+        height: 100%;
+    }
+
+    .discover-container button {
+        padding: 1rem 0;
+        width: 15rem;
+    }
+
+    .blogs-container {
+        gap: 2rem;
+    }
+
+    .blog {
+        width: 31%;
+        height: 32rem;
+    }
+
+    .blog-details {
+        height: 12rem;
+    }
+}
+
+/* Extra extra large devices: Large desktops (1450px and above) */
+@media (min-width: 1450px) {
+    nav {
+        width: var(--bigger-width);
+        margin: var(--normal-margin);
+    }
+
+    .nav-container {
+        width: var(--bigger-width);
+    }
+
+    .deals-container {
+        width: var(--bigger-width);
+    }
+
+    .deal-1 {
+        width: 62%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .deal-1-details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 49%;
+        height: 68%;
+    }
+
+    .deal-1-img {
+        width: 49%;
+        height: 100%;
+        background-image: url("https://rcp.scsstatic.ch/content/dam/assets/b2c/products/samsung/zfold7-hochformat.png");
+    }
+
+    .deal-2,
+    .deal-3 {
+        width: 30%;
+    }
+
+    .progress-container {
+        width: 45rem;
+    }
+
+    .icons-section {
+        width: var(--bigger-width);
+    }
+
+    .heading-container {
+        width: var(--bigger-width);
+    }
+
+    .smartphone {
+        justify-content: center;
+    }
+
+    .selected-cards {
+        width: var(--bigger-width);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .even-card {
+        height: 30rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        width: 48%;
+    }
+
+    .odd-card {
+        height: 30rem;
+        width: 48%;
+    }
+
+    .even-card-details {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .even-card-img-1 {
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+    }
+
+    .even-card-img-2 {
+        background-size: cover;
+        width: 70%;
+        height: 100%;
+    }
+
+    .odd-details {
+        width: 60%;
+    }
+
+    .odd-details button {
+        height: 2.5rem;
+        width: 15rem;
+    }
+
+    .discover-container {
+        width: 70rem;
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        overflow: hidden;
+    }
+
+    .blog {
+        width: 49%;
+        height: 32rem;
+    }
+
+    .blog-details {
+        height: 12rem;
+    }
+}
