@@ -1,6 +1,8 @@
 Swisscom Landing Page Clone
 ===========================
 
+<p><strong>🔗 Visit the live site:</strong> <a href="https://swisscom.netlify.app" target="_blank">Click here to open</a></p>
+
 A fully responsive front-end clone of the Swisscom landing page built with HTML and CSS only.
 This project focuses on clean layout structure, responsive design, and visually rich UI components—closely replicating the original Swisscom homepage.
 
